@@ -1,0 +1,18 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div class="container">
+    	<h1 class="text-white">You Searched for {{ searchkey }}</h1>
+    	<h2 class="text-white">Search Results:</h2>
+    	<hr style="background-color: white;">
+    	<ul id="searchresults">
+	    	{% for username in searchresults %}
+	    	<li class="text-white">
+	    		<a style="color: white;" href="../../profile/{{ username }}"><i class="fa fa-user-circle-o"></i> {{ username|title }}</a>
+	    	</li>
+	    	{% endfor %}
+    	</ul>
+    </div>
+{% endblock %}

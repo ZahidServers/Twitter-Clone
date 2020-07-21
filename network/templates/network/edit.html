@@ -1,0 +1,14 @@
+{% extends 'network/layout.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container bg-dark text-white" style="padding: 10px; margin: 10px; border: 1px solid black">
+    <h3 class="display-4">Edit Post</h3>
+    <form method="post"> 
+        {% csrf_token %}
+        {{edit}}
+        <br>
+        <button class="btn btn-outline-light" type="submit" value="Save"><i class="fa fa-floppy-o"></i> Save</button>
+    </form>
+</div>
+{% endblock %}
